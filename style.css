@@ -1,9 +1,99 @@
-*{
+
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Gill Sans MT", sans-serif;
+    font-family: "Roboto Mono", monospace;
 }
-body{
-    background-color: #997d65;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 20px;
+    padding-left: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6f381a;
+}
+.home-section {
+    background-color: #94826c;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-content {
+    max-width: 1200px;
+    width: 90%;
+}
+
+.home-text-image {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.home-text {
+    flex: 1;
+    padding-right: 20px;
+    font-family: "cooper-black-std", serif;
+}
+.home-text p{
+    font-family: "Roboto Mono", monospace;
+}
+
+.home-image {
+    flex: 1;
+    text-align: center;
+    margin-left:20px;
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+.skills-section {
+    background-color: #170c08;
+}
+
+.education-section {
+    background-color: #676f60;
+}
+
+.projects-section {
+    background-color: #170c08;
 }
