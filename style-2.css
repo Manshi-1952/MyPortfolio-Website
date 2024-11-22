@@ -12,18 +12,56 @@ html, body {
     align-items: center;
     background-color:  #170c08; /* Light background */
     overflow: hidden; /* Prevent outer scrollbar */
+    position: relative;
+    scroll-behavior: smooth; 
 }
 
 /* Main Container */
 .main-container {
     width: 80%; /* 80% of the body width */
     height: 80%; /* 80% of the body height */
-    background-color: #ffffff;
+    background-color: white;
     border-radius: 15px;
     overflow-y: scroll; /* Enables vertical scrolling */
     scroll-snap-type: y mandatory;
+    position: relative;
+    z-index: 1;
+}
+.object {
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: moveAndRotate 30s infinite linear; /* Use the animation with random duration */
 }
 
+#3d-objects-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interaction with objects */
+    z-index: -1; /* Send objects behind the main content */
+}
+
+@keyframes moveAndRotate {
+    0% {
+        transform: translate(0, 0) rotate(0deg); /* Start at initial position with no rotation */
+    }
+    25% {
+        transform: translate(50vw, 50vh) rotate(90deg); /* Move halfway across the screen */
+    }
+    50% {
+        transform: translate(100vw, 100vh) rotate(180deg); /* Move to the far end and rotate */
+    }
+    75% {
+        transform: translate(50vw, 0) rotate(270deg); /* Move back halfway */
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg); /* Complete the loop */
+    }
+}
 .main-container::-webkit-scrollbar {
     display: none; /* For Chrome, Edge, and Safari */
 }
@@ -45,21 +83,21 @@ html, body {
     border-radius: 10px;
 }
 
+
+
 /* Section Colors */
 .section-1 {
-    
     flex-direction: row; /* For left and right content */
     padding: 20px;
 }
 .section-2 {
-    background-color: #676f60
-    /* Blue */
+    background-color:white;
 }
 .section-3 {
-    background-color: pink; /* Orange */
+    background-color:white; /* Orange */
 }
 .section-4 {
-    background-color: #997d65; /* Purple */
+    background-color: white; /* Purple */
 }
 
 /* Section-1 Content Styling */
@@ -99,4 +137,132 @@ body.loaded .left-section-1 {
 
 .right-section-1 img {
     max-width: 100%; 
+}
+
+
+#scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 50px; /* Adjust the position as needed */
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1000;
+    animation: bounce 1.5s infinite;
+}
+
+/* Mouse Icon Styles */
+.mouse-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mouse {
+    width: 20px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background-color: #fff;
+    position: relative;
+}
+
+.scroll {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    margin: 5px auto;
+    animation: scroll 1s infinite;
+}
+
+/* Animation for the bounce effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+/* Animation for the scrolling dot */
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* skills section*/
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px; /* Spacing between the subsections */
+}
+
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border: 2px solid #000; /* Add border for visibility */
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #333;
+}
+
+.skill-section.large {
+    flex: 1; /* Equal size for the first two sections */
+}
+
+.skill-section.small {
+    flex: 0.5; /* Smaller width for the third section */
+}
+
+.skill-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.skill-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.frontend-images, .tools-images{
+    display: flex;
+    flex-direction: column; /* Arrange images in a column */
+    align-items: center;
+    gap:40px;
+    margin-top: 30px; /* Add some spacing from the paragraph */
+}
+
+.frontend-images img {
+    width: 80%; /* Adjust size of each image */
+    height: 80%;
+    object-fit: contain; /* Preserve aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+}
+
+.frontend-images img:hover , .tools-images img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.tools-images img{
+    width: 40%;
+    height:40%;
+    object-fit: contain; /* Preserve aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
 }

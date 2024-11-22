@@ -8,83 +8,9 @@
     <title>MyPortfolio</title>
 </head>
 <body>
-    <!-- <div class="main-container">
-        <div class="left-section">
-            <h1>Hey, It's me <br> Manshi Gohil</h1>
-            <p>
-                I'm a passionate developer exploring the world of technology. I love building interactive 
-                applications and learning new things every day. Welcome to my space!
-            </p>
-        </div>
-
-        
-        <div class="right-section">
-            <img src="assets/monsi.png" alt="A welcoming image" />
-        </div>
-    </div> -->
-
-     <!-- <div class="section-1">
-        <div class="navbar">
-            <ul>
-                <li><a href="#section-1">Home</a></li>
-                <li><a href="#section-2">Skills & Education</a></li>
-                <li><a href="#section-3">Projects</a></li>
-                <li><a href="#section-4">Contact Me</a></li>
-            </ul>
-        </div>
-        <div class="left-section-1">
-            <h1>Hey, It's me <br> Manshi Gohil</h1>
-            <p>
-                I'm a passionate developer exploring the world of technology. I love building interactive 
-                applications and learning new things every day. Welcome to my space!
-            </p>
-        </div>
-        <div class="right-section-1">
-            <img src="assets/monsi.png" alt="A welcoming image" />
-        </div>
-    </div>
-
-    <div class="section-2">
-        <div class="left-section-2">
-            <h1>My Skills</h1>
-            <p>
-                I specialize in Java, Spring Boot, HTML, CSS, and JavaScript. I'm also skilled in Data Structures 
-                and Algorithms, constantly building efficient solutions.
-            </p>
-        </div>
-        <div class="right-section">
-            <img src="assets/skills.png" alt="Skills image" />
-        </div>
-    </div>
-
-    <div class="section-3">
-        <div class="left-section">
-            <h1>Projects</h1>
-            <p>
-                I have worked on numerous projects including web applications, APIs, and database designs. 
-                Visit my GitHub to explore my work.
-            </p>
-        </div>
-        <div class="right-section">
-            <img src="assets/projects.png" alt="Projects image" />
-        </div>
-    </div>
-
-    <div class="section-4">
-        <div class="left-section">
-            <h1>Contact Me</h1>
-            <p>
-                Let's connect! Feel free to reach out for collaborations or queries at 
-                <strong>manshi.gohil@example.com</strong>.
-            </p>
-        </div>
-        <div class="right-section">
-            <img src="assets/contact.png" alt="Contact image" />
-        </div>
-    </div> -->
     <div class="main-container">
         <!-- Section 1 -->
-        <div class="section-1">
+        <div class="section-1" >
             <div class="left-section-1">
                 <h1>Hey, It's me <br> Manshi Gohil</h1>
                 <p>
@@ -95,10 +21,47 @@
             <div class="right-section-1">
                 <img src="assets/monsi.png" alt="A welcoming image" />
             </div>
+            <div id="scroll-down">
+                <div class="mouse-icon">
+                    <div class="mouse"></div>
+                    <div class="scroll"></div>
+                </div>
+            </div>
         </div>
         <!-- Section 2 -->
         <div class="section-2">
-            <h1>Skills & Education</h1>
+            <div class="skills-container">
+                <div class="skill-section large">
+                    <h2>Frontend Skills</h2>
+                    <div class="frontend-images">
+                        <img src="assets/html.png" alt="HTML Icon">
+                        <img src="assets/html.png" alt="CSS Icon">
+                        <img src="assets/html.png" alt="JavaScript Icon">
+                        <img src="assets/html.png" alt="React Icon">
+                    </div>
+                   
+                </div>
+                <div class="skill-section large">
+                    <h2>Backend Skills</h2>
+                    <div class="frontend-images">
+                        <img src="assets/java.png" alt="HTML Icon">
+                        <img src="assets/java.png" alt="CSS Icon">
+                        <img src="assets/java.png" alt="JavaScript Icon">
+                        <img src="assets/java.png" alt="React Icon">
+                    </div>
+                  
+                </div>
+                <div class="skill-section small">
+                    <h2>Tools</h2>
+                    <div class="tools-images">
+                        <img src="assets/social.png" alt="HTML Icon">
+                        <img src="assets/IntelliJ_IDEA_Icon.webp" alt="CSS Icon">
+                        <img src="assets/github.png" alt="JavaScript Icon">
+                        <img src="assets/communityIcon_e8v9nfc4b1f81.webp" alt="React Icon">
+                    </div>
+                    
+                </div>
+            </div>
         </div>
         <!-- Section 3 -->
         <div class="section-3">
@@ -109,10 +72,10 @@
             <h1>Contact Me</h1>
         </div>
     </div>
-    <script>
-        window.addEventListener('load', () => {
-            document.body.classList.add('loaded');
-        });
-    </script>
+
+
+    <div id="3d-objects-container"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
