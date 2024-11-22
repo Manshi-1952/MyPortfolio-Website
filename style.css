@@ -1,99 +1,195 @@
-
+/* 
 html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto Mono", monospace;
+    scroll-behavior: smooth;
 }
 body {
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#170c08 ;
+    overflow: hidden;
+}
+
+.main-container {
+    background-color: white;
+    width: 70%; 
+    height: 70%;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    overflow: hidden;
+   
+}
+
+.left-section {
+    width: 45%; 
+    text-align: left;
+    opacity: 0; 
+    transform: translateX(-100%); 
+    transition: all 1.2s ease-in-out; 
+    padding-left: 50px;
+}
+body.loaded .left-section {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
+.left-section h1 {
+    margin: 0;
+    font-size: 4rem;
+    color: #000;
+    line-height: 1.2;
+}
+
+.left-section p {
+    margin-top: 10px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.right-section {
+    width: 65%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section img {
+    max-width: 100%; 
+} */
+/* Global Styles */
+/* Global Styles */
+/* Global Styles */
+/* Global Styles */
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #170c08;
 }
 
 .navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
     padding: 10px 0;
-    text-align: center;
+    z-index: 10;
 }
 
-.nav-links {
+.navbar ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
-.nav-links li {
+.navbar ul li {
     margin: 0 20px;
-    padding-left: 50px;
 }
 
-.nav-links a {
+.navbar ul li a {
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #6f381a;
+.navbar ul li a:hover {
+    color: #ff9800; /* Highlight color on hover */
 }
-.home-section {
-    background-color: #94826c;
-    color: white;
+
+/* Shared Section Styles */
+.section-1, .section-2, .section-3, .section-4 {
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    margin: 50px auto; /* Centers and adds space between sections */
     padding: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    border-radius: 15px;
 }
-
-.home-content {
-    max-width: 1200px;
-    width: 90%;
-}
-
-.home-text-image {
+.section-1{
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
-    gap: 20px;
+    align-items: center;
+    overflow: hidden;
+    padding-bottom: 70px;
+    padding-top: 100px;
+    margin-top: 70px;
 }
 
-.home-text {
-    flex: 1;
-    padding-right: 20px;
-    font-family: "cooper-black-std", serif;
-}
-.home-text p{
-    font-family: "Roboto Mono", monospace;
-}
-
-.home-image {
-    flex: 1;
-    text-align: center;
-    margin-left:20px;
+/* Shared Left Section Styles */
+.left-section-1 {
+    width: 50%;
+    text-align: left;
+    opacity: 0; 
+    transform: translateX(-100%); 
+    transition: all 1.2s ease-in-out; 
+    padding-left: 50px;
 }
 
-.home-image img {
+body.loaded .left-section-1 {
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+.left-section-1 h1 {
+    font-size: 4rem;
+    color: #000;
+    margin: 0;
+}
+
+.left-section-1 p {
+    margin-top: 10px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Shared Right Section Styles */
+.right-section-1 {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section-1 img {
     max-width: 100%;
-    height: auto;
     border-radius: 10px;
 }
 
-section {
-    padding: 50px 20px;
-    text-align: center;
-    color: white;
+/* Section-Specific Styles (Optional Background Colors) */
+.section-1 {
+    background-color: #ffffff;
 }
 
-.skills-section {
-    background-color: #170c08;
+.section-2 {
+    background-color: #e8f5e9;
 }
 
-.education-section {
-    background-color: #676f60;
+.section-3 {
+    background-color: #f3e5f5;
 }
 
-.projects-section {
-    background-color: #170c08;
+.section-4 {
+    background-color: #e3f2fd;
 }

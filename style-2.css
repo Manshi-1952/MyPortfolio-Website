@@ -1,0 +1,102 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%; /* Full height */
+    font-family: "Roboto Mono", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #170c08; /* Light background */
+    overflow: hidden; /* Prevent outer scrollbar */
+}
+
+/* Main Container */
+.main-container {
+    width: 80%; /* 80% of the body width */
+    height: 80%; /* 80% of the body height */
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow-y: scroll; /* Enables vertical scrolling */
+    scroll-snap-type: y mandatory;
+}
+
+.main-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Edge, and Safari */
+}
+.main-container {
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+}
+
+
+/* Sections */
+.section-1, .section-2, .section-3, .section-4 {
+    width: 100%; /* Full width of the main container */
+    height: 100%; /* Full height of the main container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* Section Colors */
+.section-1 {
+    
+    flex-direction: row; /* For left and right content */
+    padding: 20px;
+}
+.section-2 {
+    background-color: #676f60
+    /* Blue */
+}
+.section-3 {
+    background-color: pink; /* Orange */
+}
+.section-4 {
+    background-color: #997d65; /* Purple */
+}
+
+/* Section-1 Content Styling */
+.left-section-1 {
+    width: 45%; 
+    text-align: left;
+    opacity: 0; 
+    transform: translateX(-100%); 
+    transition: all 1.2s ease-in-out; 
+    padding-left: 50px;
+}
+body.loaded .left-section-1 {
+    opacity: 1;
+    transform: translateX(0); 
+}
+.left-section-1 h1 {
+    margin: 0;
+    font-size: 4rem;
+    color: #000;
+    line-height: 1.2;
+}
+
+.left-section-1 p {
+    margin-top: 10px;
+    color: #333;
+    line-height: 2  ;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.right-section-1 {
+    width: 65%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section-1 img {
+    max-width: 100%; 
+}

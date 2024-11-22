@@ -3,49 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-2.css">
     <link rel="stylesheet" href="https://use.typekit.net/ivz4cup.css">
-    <title>Navbar Example</title>
+    <title>MyPortfolio</title>
 </head>
 <body>
-   <section id="home" class="home-section">
-      <div class="home-content">
-         <nav class="navbar">
-            <ul class="nav-links">
-               <li><a href="#home">Home</a></li>
-               <li><a href="#skills">Skills</a></li>
-               <li><a href="#education">Education</a></li>
-               <li><a href="#projects">Projects</a></li>
+    <!-- <div class="main-container">
+        <div class="left-section">
+            <h1>Hey, It's me <br> Manshi Gohil</h1>
+            <p>
+                I'm a passionate developer exploring the world of technology. I love building interactive 
+                applications and learning new things every day. Welcome to my space!
+            </p>
+        </div>
+
+        
+        <div class="right-section">
+            <img src="assets/monsi.png" alt="A welcoming image" />
+        </div>
+    </div> -->
+
+     <!-- <div class="section-1">
+        <div class="navbar">
+            <ul>
+                <li><a href="#section-1">Home</a></li>
+                <li><a href="#section-2">Skills & Education</a></li>
+                <li><a href="#section-3">Projects</a></li>
+                <li><a href="#section-4">Contact Me</a></li>
             </ul>
-         </nav>
-         <div class="home-text-image">
-            <div class="home-text">
-                <h1 style="font-size: 5rem; color:#1e130f ;font-weight: 400;">Hey, It's Me<br />Manshi Gohil</h1>
-                <p>This is the home section. Feel free to explore!</p>
+        </div>
+        <div class="left-section-1">
+            <h1>Hey, It's me <br> Manshi Gohil</h1>
+            <p>
+                I'm a passionate developer exploring the world of technology. I love building interactive 
+                applications and learning new things every day. Welcome to my space!
+            </p>
+        </div>
+        <div class="right-section-1">
+            <img src="assets/monsi.png" alt="A welcoming image" />
+        </div>
+    </div>
+
+    <div class="section-2">
+        <div class="left-section-2">
+            <h1>My Skills</h1>
+            <p>
+                I specialize in Java, Spring Boot, HTML, CSS, and JavaScript. I'm also skilled in Data Structures 
+                and Algorithms, constantly building efficient solutions.
+            </p>
+        </div>
+        <div class="right-section">
+            <img src="assets/skills.png" alt="Skills image" />
+        </div>
+    </div>
+
+    <div class="section-3">
+        <div class="left-section">
+            <h1>Projects</h1>
+            <p>
+                I have worked on numerous projects including web applications, APIs, and database designs. 
+                Visit my GitHub to explore my work.
+            </p>
+        </div>
+        <div class="right-section">
+            <img src="assets/projects.png" alt="Projects image" />
+        </div>
+    </div>
+
+    <div class="section-4">
+        <div class="left-section">
+            <h1>Contact Me</h1>
+            <p>
+                Let's connect! Feel free to reach out for collaborations or queries at 
+                <strong>manshi.gohil@example.com</strong>.
+            </p>
+        </div>
+        <div class="right-section">
+            <img src="assets/contact.png" alt="Contact image" />
+        </div>
+    </div> -->
+    <div class="main-container">
+        <!-- Section 1 -->
+        <div class="section-1">
+            <div class="left-section-1">
+                <h1>Hey, It's me <br> Manshi Gohil</h1>
+                <p>
+                    I'm a passionate developer exploring the world of technology. I love building interactive 
+                    applications and learning new things every day. Welcome to my space!
+                </p>
             </div>
-            <div class="home-image">
-                <img src="assets/manshi-1.png" alt="A descriptive image">
+            <div class="right-section-1">
+                <img src="assets/monsi.png" alt="A welcoming image" />
             </div>
         </div>
-      </div>
-  </section>
-
-  <!-- Section 2: Skills -->
-  <section id="skills" class="skills-section">
-      <h2>My Skills</h2>
-      <p>Describe your skills here...</p>
-  </section>
-
-  <!-- Section 3: Education -->
-  <section id="education" class="education-section">
-      <h2>Education</h2>
-      <p>Detail your education background...</p>
-  </section>
-
-  <!-- Section 4: Projects -->
-  <section id="projects" class="projects-section">
-      <h2>My Projects</h2>
-      <p>Showcase your projects here...</p>
-  </section>
+        <!-- Section 2 -->
+        <div class="section-2">
+            <h1>Skills & Education</h1>
+        </div>
+        <!-- Section 3 -->
+        <div class="section-3">
+            <h1>Projects</h1>
+        </div>
+        <!-- Section 4 -->
+        <div class="section-4">
+            <h1>Contact Me</h1>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
 </body>
 </html>
